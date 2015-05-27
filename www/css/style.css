@@ -1,0 +1,73 @@
+/* Empty. Add your own CSS if you like */
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+    background: linear-gradient(0deg, #2095c1, #2095c1 50%, #2095c1 50%);
+}
+
+.pane, .view {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: #FFF;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.bar {
+  height: 50px;
+}
+
+.bar.bar-header .button + .title {
+    text-align: left;
+    left: 35px;
+    line-height: 50px;
+}
+
+.bar.bar-stable .title {
+    color: #FFF;
+    font-family: RobotoDraft,Roboto,"Helvetica Neue","Segoe UI",sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.tabs {
+  border-color: #FFF;
+  background-color: #e2fbff;
+  height: 74px;
+}
+
+.tab-item {
+    border-right: 1px #bad3d8 solid;
+}
+
+.tab-item-active {
+  background-color: #FFF;
+  border-top: 4px #60bde8 solid;
+  border-right: 1px #bad3d8 solid;
+
+}
+
+.tabs-icon-top > .tabs .tab-item, .tabs-icon-top.tabs .tab-item, .tabs-icon-bottom > .tabs .tab-item, .tabs-icon-bottom.tabs .tab-item {
+    padding: 10px;
+}
+
+.tabs-top > .tabs, .tabs.tabs-top {
+    top: -10px;
+    position: relative;
+    padding-top: 0px;
+    background-position: center bottom;
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+}
+
+.has-tabs-top {
+    top: 5px;
+}
+
+.box {
+  height: auto;
+}

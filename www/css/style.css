@@ -24,14 +24,14 @@
 .bar.bar-header .button + .title {
     text-align: left;
     left: 35px;
-    line-height: 50px;
+    line-height: 48px;
 }
 
 .bar.bar-stable .title {
     color: #FFF;
     font-family: RobotoDraft,Roboto,"Helvetica Neue","Segoe UI",sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .tabs {
@@ -64,10 +64,106 @@
     border-bottom-width: 1px;
 }
 
+.list {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 350px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+
+.item p {
+    color: #666;
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.item h2 {
+    margin: 0px 0px 2px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
 .has-tabs-top {
     top: 5px;
 }
 
 .box {
   height: auto;
+}
+
+.tabs .tab-item .icon.crianca {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_1.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.crianca-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_1.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.adultos {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_3.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.adultos-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_3.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.idosos {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_4.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.idosos-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_4.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.especiais {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_5.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.especiais-active {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 90%;
+  background-image: url('../img/icons/icon_5.png');
+  background-size:contain;
+}
+
+.item-avatar .item-content .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-image, .item-avatar-left .item-content .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-image, .item-avatar-left > img:first-child, .item-avatar > img:first-child {
+    border-radius: 50%;
+    left: 16px;
+    max-height: 40px;
+    max-width: 48px;
+}
+
+p.texto {
+    margin: 0px 0px 10px;
+    padding-bottom: 350px;
 }

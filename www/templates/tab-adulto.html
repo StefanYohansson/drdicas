@@ -1,0 +1,14 @@
+<ion-view view-title="Dr Dicas | Adolescentes e Adultos">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in adulto" type="item-text-wrap" href="#/tab/adulto/{{chat.pk}}">
+        <img src="img/icons/icon_8.png">
+        <h2>{{chat.fields.titulo}}</h2>
+        <p>{{chat.fields.texto | truncate: 150: '...' }}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

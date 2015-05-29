@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['angular.filter', 'ionic', 'ionic-material', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -41,46 +41,83 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.crianca', {
+    url: '/crianca',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-crianca': {
+        templateUrl: 'templates/tab-crianca.html',
+        controller: 'criancaCtrl'
+      }
+    }
+  })
+  .state('tab.crianca-detail', {
+    url: '/crianca/:chatId',
+    views: {
+      'tab-crianca': {
+        templateUrl: 'templates/crianca-detail.html',
+        controller: 'CriancaDetailCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.adulto', {
+      url: '/adulto',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-adulto': {
+          templateUrl: 'templates/tab-adulto.html',
+          controller: 'adultoCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.adulto-detail', {
+      url: '/adulto/:chatId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
+        'tab-adulto': {
+          templateUrl: 'templates/adulto-detail.html',
           controller: 'ChatDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.idoso', {
+    url: '/idoso',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-idoso': {
+        templateUrl: 'templates/tab-idoso.html',
+        controller: 'idosoCtrl'
+      }
+    }
+  })
+  .state('tab.idoso-detail', {
+    url: '/idoso/:chatId',
+    views: {
+      'tab-idoso': {
+        templateUrl: 'templates/idoso-detail.html',
+        controller: 'idosoDetailCtrl'
+      }
+    }
+  })
+
+  .state('tab.especial', {
+    url: '/especial',
+    views: {
+      'tab-especial': {
+        templateUrl: 'templates/tab-especial.html',
+        controller: 'especialCtrl'
+      }
+    }
+  })
+  .state('tab.especial-detail', {
+    url: '/especial/:chatId',
+    views: {
+      'tab-especial': {
+        templateUrl: 'templates/especial-detail.html',
+        controller: 'especialDetailCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/crianca');
 
 });

@@ -1,20 +1,65 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
-
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  }
-})
-
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
+.controller('criancaCtrl', function($scope, crianca) {
+  var handleSuccess = function(data, status) {
+    $scope.crianca = data;
   };
+
+  crianca.all().success(handleSuccess);
+})
+
+.controller('adultoCtrl', function($scope, adulto) {
+  var handleSuccess = function(data, status) {
+    $scope.adulto = data;
+  };
+
+  adulto.all().success(handleSuccess);
+})
+
+.controller('CriancaDetailCtrl', function($scope, $stateParams, crianca) {
+  var handleSuccess = function(data, status) {
+    $scope.chat = data;
+  };
+
+  crianca.get($stateParams.chatId).success(handleSuccess);
+})
+
+.controller('ChatDetailCtrl', function($scope, $stateParams, adulto) {
+  var handleSuccess = function(data, status) {
+    $scope.chat = data;
+  };
+
+  adulto.get($stateParams.chatId).success(handleSuccess);
+})
+
+.controller('idosoDetailCtrl', function($scope, $stateParams, idoso) {
+  var handleSuccess = function(data, status) {
+    $scope.chat = data;
+  };
+
+  idoso.get($stateParams.chatId).success(handleSuccess);
+})
+
+.controller('especialDetailCtrl', function($scope, $stateParams, especial) {
+  var handleSuccess = function(data, status) {
+    $scope.chat = data;
+  };
+
+  especial.get($stateParams.chatId).success(handleSuccess);
+})
+
+.controller('idosoCtrl', function($scope, idoso) {
+  var handleSuccess = function(data, status) {
+    $scope.idoso = data;
+  };
+
+  idoso.all().success(handleSuccess);
+})
+
+.controller('especialCtrl', function($scope, especial) {
+  var handleSuccess = function(data, status) {
+    $scope.especial = data;
+  };
+
+  especial.all().success(handleSuccess);
 });

@@ -5,9 +5,6 @@ angular.module('starter.services', [])
     all: function() {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/adulto/');
     },
-    remove: function(chat) {
-      adulto.splice(adulto.indexOf(chat), 1);
-    },
     get: function(chatId) {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/'+chatId+'/adulto/');
     }
@@ -19,9 +16,6 @@ angular.module('starter.services', [])
   return {
     all: function() {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/crianca/');
-    },
-    remove: function(chat) {
-      crianca.splice(crianca.indexOf(chat), 1);
     },
     get: function(chatId) {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/'+chatId+'/crianca/');
@@ -35,9 +29,6 @@ angular.module('starter.services', [])
     all: function() {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/idoso/');
     },
-    remove: function(chat) {
-      idoso.splice(idoso.indexOf(chat), 1);
-    },
     get: function(chatId) {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/'+chatId+'/idoso/');
     }
@@ -50,11 +41,22 @@ angular.module('starter.services', [])
     all: function() {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/especial/');
     },
-    remove: function(chat) {
-      especial.splice(especial.indexOf(chat), 1);
-    },
     get: function(chatId) {
       return $http.get('http://drdicas.pythonanywhere.com/artigos/'+chatId+'/especial/');
+    }
+  };
+})
+
+.factory('slider', function($http) {
+
+  var sliders = ['img/Imagem_02.jpg', 'img/Imagem_01.jpg', 'img/Imagem_04.png', 'img/Imagem_03.jpg'];
+
+  return {
+    all: function() {
+      return sliders;
+    },
+    get: function(key) {
+      return sliders[key];
     }
   };
 });

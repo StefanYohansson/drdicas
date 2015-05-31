@@ -1,11 +1,24 @@
 angular.module('starter.controllers', [])
 
-.controller('criancaCtrl', function($scope, crianca) {
+.controller('navController', function($scope, slider, $ionicTabsDelegate, $ionicSlideBoxDelegate) {
+  $scope.slider = slider.all();
+
+  $scope.tabClick = function(index) {
+    var indexes = {'crianca': 0, 'adulto': 1, 'idoso': 2, 'especial': 3};
+
+    $ionicSlideBoxDelegate.slide(indexes[index]);
+
+    $ionicTabsDelegate.select(indexes[index]);
+  }
+})
+
+.controller('criancaCtrl', function($scope, crianca, slider) {
   var handleSuccess = function(data, status) {
     $scope.crianca = data;
   };
 
   crianca.all().success(handleSuccess);
+
 })
 
 .controller('adultoCtrl', function($scope, adulto) {

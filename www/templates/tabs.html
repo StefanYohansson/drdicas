@@ -3,50 +3,39 @@ Create tabs with an icon and label, using the tabs-positive style.
 Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
-<ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true">
-  <ion-slide>
+<div ng-controller="navController">
+<ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true">
+  <ion-slide ng-repeat="slide in slider">
     <div class="box blue">
-      <img src="img/Imagem_01.png" style="width: 100%;" />
-    </div>
-  </ion-slide>
-  <ion-slide>
-    <div class="box yellow">
-      <img src="img/Imagem_02.png" style="width: 100%" />
-    </div>
-  </ion-slide>
-  <ion-slide>
-    <div class="box pink">
-      <img src="img/Imagem_03.png" style="width: 100%" />
-    </div>
-  </ion-slide>
-  <ion-slide>
-    <div class="box pink">
-      <img src="img/Imagem_04.png" style="width: 100%" />
+      <img src="{{ slide }}" style="width: 100%;" />
     </div>
   </ion-slide>
 </ion-slide-box>
 
+
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
   <!-- criancaboard Tab -->
-  <ion-tab icon-off="crianca" icon-on="crianca-active" href="#/tab/crianca">
+  <ion-tab icon-off="crianca" icon-on="crianca-active" ng-click="tabClick('crianca')" href="#/tab/crianca">
     <ion-nav-view name="tab-crianca"></ion-nav-view>
   </ion-tab>
 
   <!-- adulto Tab -->
-  <ion-tab icon-off="adultos" icon-on="adultos-active" href="#/tab/adulto">
+  <ion-tab icon-off="adultos" icon-on="adultos-active" ng-click="tabClick('adulto')" href="#/tab/adulto">
     <ion-nav-view name="tab-adulto"></ion-nav-view>
   </ion-tab>
 
   <!-- idoso Tab -->
-  <ion-tab icon-off="idosos" icon-on="idosos-active" href="#/tab/idoso">
+  <ion-tab icon-off="idosos" icon-on="idosos-active" ng-click="tabClick('idoso')" href="#/tab/idoso">
     <ion-nav-view name="tab-idoso"></ion-nav-view>
   </ion-tab>
 
   <!-- idoso Tab -->
-  <ion-tab icon-off="especiais-active" icon-on="especiais-active" href="#/tab/especial">
+  <ion-tab icon-off="especiais-active" icon-on="especiais-active" ng-click="tabClick('especial')" href="#/tab/especial">
     <ion-nav-view name="tab-especial"></ion-nav-view>
   </ion-tab>
 
 
 </ion-tabs>
+
+</div>

@@ -18,6 +18,7 @@ angular.module('starter', ['angular.filter', 'ionic', 'ionic-material', 'starter
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
+
   });
 })
 
